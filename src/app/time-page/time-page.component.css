@@ -1,0 +1,137 @@
+.timeContent{
+  background-color: white;
+  width: 100%;
+  height: 93.3%;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.leftPanel{
+  margin: 20px;
+  padding: 10px;
+}
+
+#filterBar{
+  width: 100%;
+  padding: 5px 5px 5px 0px;
+  margin-bottom: 10px;
+}
+
+.weekSelect{
+  padding: 7.5px;
+  margin-left: 10px;
+}
+
+.checkBoxOne {
+  border: none;
+  box-shadow: none;
+  width: 22px;
+  height: 22px;
+  margin-right: 2px;
+  vertical-align: bottom;
+  position: relative;
+  top: 1px;
+  margin-left: 10px;
+}
+
+.sumBox{
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+#filterButton{
+  float: right;
+}
+
+#employeeSelect{
+  width: 25%;
+}
+
+#timeTableOne{
+  width: 100%;
+}
+
+#timeTableOne thead{
+  font-size: 22px;
+  height: 4.7%;
+  min-height: 40px;
+}
+
+#timeTableOne tbody{
+  display:block;
+  width: 100%;
+  max-width: 100%;
+  height: 408px;
+}
+
+.headCol1{
+  width: 5%;
+}
+
+.headCol2{
+  width: 16%;
+}
+
+.headCol3{
+  width: 4%;
+}
+
+.headCol4{
+  width: 4%;
+}
+
+.headCol5{
+  width: 8%;
+}
+
+.col1{
+  width: 4%;
+}
+
+.col2{
+  width: 14.5%;
+}
+
+.col3{
+  width: 4%;
+}
+
+.col4{
+  width: 4%;
+}
+
+.col5{
+  width: 8%;
+}
+
+#tableStats{
+  margin-top: 5px;
+  font-size: 18px;
+  height: 35px;
+}
+
+#timeInput{
+  width: 20%;
+}
+
+#timeWorkTypeInput{
+  width: 35%;
+  margin-left: 10px;
+  padding: 7px;
+}
+
+#submitTime{
+  margin-left: 10px;
+
+}
+
+.rightPanel{
+  margin: 20px;
+}
+
+#employeeList{
+  height: 500px;
+  min-height: 400px;
+  max-height: 500px;
+}

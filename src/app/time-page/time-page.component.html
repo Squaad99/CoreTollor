@@ -1,0 +1,408 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="timeContent">
+
+
+  <div class="leftPanel">
+
+    <div id="filterBar">
+
+      <select id="employeeSelect">
+        <option value='1'>Samtliga</option>
+        <option value='2'>Henrik Berglund</option>
+      </select>
+
+
+      <input type="week" class="weekSelect"/>
+
+      <label><input type="checkbox" class="checkBoxOne" (change)="toggleEditable($event)"/>Intervall</label>
+
+      <input type="week" class="weekSelect" *ngIf="this.intervall"/>
+
+      <button id="filterButton">Filtrera</button>
+      <label class="sumBox"><input type="checkbox" class="checkBoxOne"/>Summera</label>
+
+
+    </div>
+
+    <table class="tableStyleOne" id="timeTableOne">
+      <thead>
+      <th class="headCol1">Order</th>
+      <th class="headCol2">Arbete</th>
+      <th class="headCol3">Timmar</th>
+      <th class="headCol4">Vecka</th>
+      <th class="headCol5">Datum</th>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">10 Aluminium</td>
+        <td class="col3">5</td>
+        <td class="col4">20</td>
+        <td class="col5">2018-06-14</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div id="tableStats">
+      <label class="floatRight">Totala timmar: 5</label>
+      <label class="floatRight">Poster: 1</label>
+    </div>
+
+    <form id="timeInputForm">
+      <input id="timeInput" placeholder="Order">
+      <select id="timeWorkTypeInput">
+        <option value='1'>10 Aluminium</option>
+        <option value='2'>12 Stål</option>
+      </select>
+      <input type="week" class="weekSelect" id="timeWeekInput"/>
+      <button id="submitTime">Lägg till</button>
+    </form>
+
+  </div>
+
+  <div class="rightPanel">
+
+    <h4>Anställda</h4>
+
+    <ul class="listTypeOne" id="employeeList">
+      <li>Coffee<span class="clickAbleSpan noSelect">X</span></li>
+      <li>Coffee<span class="clickAbleSpan noSelect">X</span></li>
+      <li>Coffee<span class="clickAbleSpan noSelect">X</span></li>
+    </ul>
+
+    <input placeholder="Namn" style="width: 65%">
+    <button class="floatRight">Lägg till</button>
+
+  </div>
+
+</div>

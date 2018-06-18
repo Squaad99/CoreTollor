@@ -1,0 +1,288 @@
+<app-nav-bar></app-nav-bar>
+<div class="homeContent">
+
+  <div class="leftPanel">
+
+    <input class="orderSearch" placeholder="Search">
+
+    <button type="button" class="newOrderBtn" data-toggle="modal" data-target="#createOrderModal">Ny Order</button>
+
+
+    <table class="tableStyleOne" id="orderTable">
+      <thead>
+      <th class="headCol1">Order</th>
+      <th class="headCol2">Objekt</th>
+      <th class="headCol3">Kund</th>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="col1">11400</td>
+        <td class="col2">Dönsö</td>
+        <td class="col3">Telge Glas</td>
+      </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+
+  <div class="rightPanel">
+
+    <div class="topPane">
+
+      11400 Donsö Kyrka
+
+      <button class="deleteButton button">Ta bort</button>
+
+    </div>
+
+    <div class="botPane">
+
+      <ul class="tabNav">
+        <li class="tabNavItemLeft" (click)="setPageOne()" [ngClass]="{'tabNavItemLeftActive' : pane1}">Order</li>
+        <li class="tabNavItem" (click)="setPageTwo()" [ngClass]="{'tabNavItemActive' : pane2}">Beställning</li>
+        <li class="tabNavItem" (click)="setPageThree()" [ngClass]="{'tabNavItemActive' : pane3}">Bilder</li>
+        <li class="tabNavItemRight" (click)="setPageFour()" [ngClass]="{'tabNavItemRightActive' : pane4}">Kalkyl</li>
+      </ul>
+
+      <div class="pane1" *ngIf="pane1">
+
+        <div class="leftCol">
+
+          <div class="field">
+            <input class="inputView" type="text" name="fullname" id="input1" value="11404" placeholder=" ">
+            <label for="input1">Order Nr</label>
+          </div>
+
+          <div class="field">
+            <input class="inputView" type="text" name="fullname" id="input2" value="Donsö kyrka" placeholder=" ">
+            <label for="input2">Namn</label>
+          </div>
+
+          <div class="field">
+            <input class="inputView" type="text" name="fullname" id="input3" value="Gata 1" placeholder=" ">
+            <label for="input3">Adress</label>
+          </div>
+
+        </div>
+
+        <div class="rightCol">
+
+
+        </div>
+
+      </div>
+
+      <div class="pane2" *ngIf="pane2">
+
+
+        <table class="ordersTable">
+          <thead>
+          <th class="ordersTableCol1">Kommentar</th>
+          <th class="ordersTableCol2">Datum</th>
+          <th class="ordersTableCol3">Bilaga</th>
+          <th class="ordersTableCol4"></th>
+          </thead>
+          <tbody>
+          <tr *ngFor="let listItem of ordersList">
+            <td class="ordersTableRowCol1">{{listItem.comment}}</td>
+            <td class="ordersTableRowCol2">{{listItem.date}}</td>
+            <td class="ordersTableRowCol3"><span class="openOrdersFileSpan" (click)="openOrdersFile(listItem.fileBase64)">Bilaga</span></td>
+            <td class="ordersTableRowCol4"><span class="clickAbleSpan noSelect">X</span></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <div id="fileInputBar">
+
+        <input type="text" class="inputField" style="width: 45%; max-width: 220px" placeholder="Kommentar" name="email" #email="ngModel" [(ngModel)]="modelOrdersList.comment">
+
+        <input type="file" (change)="ordersFileUpload($event)">
+
+        <button id="addOrderButton" (click)="addOrdersListItem(this.modelOrdersList)">Lägg till</button>
+
+        </div>
+
+      </div>
+
+      <div class="pane3" *ngIf="pane3">
+
+      </div>
+
+      <div class="pane4" *ngIf="pane4">
+
+        <div class="leftCol">
+
+          <div class="field">
+            <input class="inputView" type="text" name="fullname" id="input10" value="100 000 :-" placeholder=" ">
+            <label for="input10">Summa</label>
+          </div>
+
+          <div class="field">
+            <input class="inputView" type="text" name="fullname" id="input12" value="27" placeholder=" ">
+            <label for="input12">Production</label>
+          </div>
+
+          <label class="progressLabel">Produktion: 20% 5/27</label>
+          <div class="progressBar">
+            <div class="bar1"></div>
+          </div>
+
+        </div>
+
+        <div class="rightCol">
+
+          <div class="field">
+            <input class="inputView" type="text" name="fullname" id="input11" value="0 :-" placeholder=" ">
+            <label for="input11">Debiteat</label>
+          </div>
+
+          <div class="field">
+            <input class="inputView" type="text" name="fullname" id="input13" value="13" placeholder=" ">
+            <label for="input13">Montage</label>
+          </div>
+
+          <label class="progressLabel">Montage: 40% 5/13</label>
+          <div class="progressBar">
+            <div class="bar2"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+  </div>
+
+</div>
+
+
+<div id="createOrderModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Skapa order</h5>
+        <span style="float: right" data-dismiss="modal">X</span>
+      </div>
+
+
+      <!--Custom Body Modal-->
+      <div class="modalBody">
+
+        <div class="boxInput">
+          <label style="width: 100px">Order*</label>
+          <input class="inputView" style="width: 350px">
+        </div>
+
+        <div class="boxInput">
+          <label style="width: 100px">Objekt*</label>
+          <input class="inputView" style="width: 350px">
+        </div>
+
+
+        <div class="boxInput">
+          <label style="width: 100px">Kund*</label>
+          <select class="customerSelect">
+            <option class="notSelectedAbleOption" style='display: none' disabled selected>Ej vald</option>
+            <option value='1'>first</option>
+            <option value='2'>second item</option>
+            <option value='3'>third item</option>
+            <option value='4'>fourth item</option>
+            <option value='5'>fifth item</option>
+            <option value='1'>first item</option>
+            <option value='2'>second item</option>
+            <option value='3'>third item</option>
+            <option value='4'>fourth item</option>
+            <option value='5'>fifth item</option>
+            <option value='1'>first item</option>
+            <option value='2'>second item</option>
+            <option value='3'>third item</option>
+            <option value='4'>fourth item</option>
+            <option value='5'>fifth item</option>
+            <option value='2'>second item</option>
+            <option value='3'>third item</option>
+            <option value='4'>fourth item</option>
+            <option value='5'>fifth item</option>
+            <option value='1'>first item</option>
+            <option value='2'>second item</option>
+            <option value='3'>third item</option>
+            <option value='4'>fourth item</option>
+            <option value='5'>fifth item</option>
+            <option value='2'>second item</option>
+            <option value='3'>third item</option>
+            <option value='4'>fourth item</option>
+            <option value='5'>fifth item</option>
+            <option value='1'>first item</option>
+            <option value='2'>second item</option>
+            <option value='3'>third item</option>
+            <option value='4'>fourth item</option>
+            <option value='5'>fifth item</option>
+            <option value='2'>second item</option>
+            <option value='3'>third item</option>
+            <option value='4'>fourth item</option>
+            <option value='5'>fifth item</option>
+            <option value='1'>first item</option>
+            <option value='2'>second item</option>
+            <option value='3'>third item</option>
+            <option value='4'>fourth item</option>
+            <option value='5'>fifth item</option>
+            <option value='2'>second item</option>
+            <option value='3'>third item</option>
+            <option value='4'>fourth item</option>
+            <option value='5'>fifth item</option>
+            <option value='1'>first item</option>
+            <option value='2'>second item</option>
+            <option value='3'>third item</option>
+            <option value='4'>fourth item</option>
+            <option value='5'>fifth item</option>
+            <option>........
+            <option>........
+              //I have many options.....
+          </select>
+        </div>
+
+
+
+        <div class="boxInput">
+          <label style="width: 100px">Eller</label>
+        </div>
+
+        <div class="customerBox">
+
+          <h5>Ny kund</h5>
+
+        <div class="boxInput">
+          <label style="width: 100px">Kund*</label>
+          <input class="inputView" style="width: 350px">
+        </div>
+
+        <div class="boxInput">
+          <label style="width: 100px">Telefon</label>
+          <input class="inputView" style="width: 350px">
+        </div>
+
+        <div class="boxInput">
+          <label style="width: 100px">Mail</label>
+          <input class="inputView" style="width: 350px">
+        </div>
+
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" data-dismiss="modal">Spara</button>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
